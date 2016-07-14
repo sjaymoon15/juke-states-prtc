@@ -3,10 +3,12 @@ juke.config(function($stateProvider){
 	$stateProvider.state("oneAlbum", {
 		templateUrl: "/js/album/oneAlbum.html",
 		url:"/albums/:id",
-		controller: "AlbumCtrl"
-		// controller: function($scope, $stateParams){
-		// 	$scope.oneAlbumId = $stateParams.id;
-		// }
+		controller: "AlbumCtrl",
+		resolve:{
+			album: function(AlbumFactory, $stateParams){
+				return AlbumFactory.fetchById($stateParams.id);
+			}
+		}
 	});
 
 	$stateProvider.state("oneAlbum.showAlbums", {

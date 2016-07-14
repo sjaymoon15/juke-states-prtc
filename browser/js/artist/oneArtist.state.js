@@ -10,4 +10,9 @@ juke.config(function($stateProvider){
 		templateUrl: "/js/album/showAlbums.html",
 		url:"/showAlbums"
 	})
+
+	$stateProvider.state("oneArtist.showSongs",{
+		templateUrl: "/js/artist/showSogns.html",
+		url:"/showSongs"
+	})
 });
