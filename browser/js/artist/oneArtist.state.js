@@ -12,7 +12,7 @@ juke.config(function($stateProvider){
 	})
 
 	$stateProvider.state("oneArtist.showSongs",{
-		templateUrl: "/js/artist/showSogns.html",
+		templateUrl: "/js/artist/showSongs.html",
 		url:"/showSongs"
 	})
 });
